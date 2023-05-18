@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/icon.webp">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Tareas</title>
+</head>
+<body>
+
+    <header>
+        <div class="fondo">
+            <img src="img/img-portada.webp">
+            <h1>Proyecto Integrador</h1>
+        </div>
+        
+        <ul>
+            <a><li>Agregar/Modificar/Eliminar-Tarea</li></a>
+            <a><li>Tabla de tareas</li></a>
+        </ul>
+    </header>
+
+
+    <main>
+        <section>
+            <h2>Agregar | Modificar | Eliminar</h2>
+
+            <label for="nombreT" class="name">Tarea: </label>
+            <input  class="nombre" type="text" name="Tarea" id="nombreT">
+
+            <label for="estatus" class="status">Estado de la tarea: </label>
+            <select id="estado-tarea">
+                <option value="Pendiente">Pendiente</option>
+                <option value="Iniciada">Iniciada</option>
+                <option value="Pausada">Pausada</option>
+                <option value="Finalizada">Finalizada</option>
+            </select>
+            
+            <br>
+
+            
+
+            <div class="fila">
+
+                <div class="descCuadro">
+                    <label for="descripcion">Descripción</label>
+                    <br>
+                    <textarea id="descripcion"></textarea>
+                </div>
+
+                <div class="opcionRadio">
+                    <label class="opcion">
+                        <input type="radio" name="accion" value="Agregar" checked>
+                        Agregar
+                    </label>
+                    <br>
+                    <label class="opcion">
+                        <input type="radio" name="accion" value="Modificar">
+                        Modificar
+                    </label>
+                    <br>
+                    <label class="opcion">
+                        <input type="radio" name="accion" value="Eliminar">
+                        Eliminar
+                    </label>
+
+                    <br>
+                    <label for="idTarea">ID tarea: </label>
+                    <input type="text" id="idTarea">
+                </div>
+                
+            </div>
+
+            <button id="btnrealizar" type="submit"> Realizar</button>
+        </section>
+
+        <section>
+            <h2>Lista de tareas</h2>
+
+            <div class="asignacion">
+                <p id="tareas"></p>
+                
+            </div>
+
+            <!--<table class="tabla">
+                <tr>
+                    <td class="fTarea">Tarea</td>
+                    <td class="fEstado">Estado</td>
+                    <td class="fDescrip">Descripcion</td>
+                </tr>
+            </table>-->
+        </section>
+
+        
+    </main>
+
+    <footer>
+        <h3>Derechos reservados - SID</h3>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
+    <script src="Crud.js"></script>
+</body>
+</html>
